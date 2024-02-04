@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+:root {
+  --Grayish_Blue: hsl(217, 19%, 38%);
+  --Dark_Grayish_Blue: hsl(217, 19%, 24%);
+  --Dark_Blue: hsl(218, 23%, 16%);
+  --Light_Cyan: hsl(193, 38%, 86%);
+  --Neon_Green: hsl(150, 100%, 66%);
+  font-size: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: var(--Dark_Blue);
+}
+.contianer {
+  position: relative;
+  background: var(--Dark_Grayish_Blue);
+  width: 40vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 3vh 5vw;
+  text-align: center;
+}
+.contianer h3 {
+  font-size: 1.2rem;
+  color: var(--Neon_Green);
+  padding: 2vh;
+  letter-spacing: 0.3rem;
+}
+.contianer q {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--Light_Cyan);
+  padding-bottom: 5vh;
+  padding-top: 2vh;
+}
+.divider {
+  width: 35vw;
+  padding-bottom: 5vh;
+}
+
+.button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: var(--Neon_Green);
+  position: absolute;
+  bottom: -2rem;
+  cursor: pointer;
+}
+.button:is(:hover) {
+  box-shadow: 0px 0px 20px var(--Neon_Green);
+  transition: 250ms;
+}
+
+@media only screen and (max-width: 767px) {
+  .contianer {
+    width: 90vw;
+  }
+  .contianer q {
+    font-size: 2.2rem;
+  }
+  .divider {
+    width: 80vw;
+  }
+  .button {
+    width: 5rem;
+    height: 5rem;
+  }
+}
